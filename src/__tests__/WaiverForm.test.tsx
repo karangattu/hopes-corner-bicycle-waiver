@@ -161,17 +161,17 @@ describe('WaiverForm', () => {
     
     // Click to switch to Spanish
     fireEvent.click(languageButton);
-    let spanishContent = screen.queryAllByText(/PROGRAMA|Bicicleta/i);
+    const spanishContent = screen.queryAllByText(/PROGRAMA|Bicicleta/i);
     expect(spanishContent.length).toBeGreaterThan(0);
     
     // Click to switch to Chinese
     fireEvent.click(languageButton);
-    let chineseContent = screen.queryAllByText(/自行车|弃权/i);
+    const chineseContent = screen.queryAllByText(/自行车|弃权/i);
     expect(chineseContent.length).toBeGreaterThan(0);
     
     // Click to switch back to English
     fireEvent.click(languageButton);
-    let englishContent = screen.queryAllByText(/BICYCLE|WAIVER/i);
+    const englishContent = screen.queryAllByText(/BICYCLE|WAIVER/i);
     expect(englishContent.length).toBeGreaterThan(0);
   });
 
